@@ -92,3 +92,6 @@ let supcar:supercar ={
     name:";alskfjd;l",
     madein:"a;lsfdkj"
 }
+
+let val:unknown = "hello"
+let len:string = (val as string).toUpperCase()
