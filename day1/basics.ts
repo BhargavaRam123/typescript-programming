@@ -43,3 +43,7 @@ let obj:{name:string,age:number, section:string} = {
     age:23,
     section:"c1"
 }
+let obj2:{name:string,age:number, section?:string} = {
+    name:"bhargav",
+    age:23
+}
