@@ -47,3 +47,13 @@ let obj2:{name:string,age:number, section?:string} = {
     name:"bhargav",
     age:23
 }
+
+
+enum directions  {
+    north="North",
+    south= "South",
+    east = "East",
+    west = "Weak"
+}
+console.log(directions.north)
+//we can also give numerical values to the enums
