@@ -57,3 +57,19 @@ enum directions  {
 }
 console.log(directions.north)
 //we can also give numerical values to the enums
+
+
+
+type carmodel = string
+type carname = string
+type madeyear = number 
+type cartype ={
+    name:carname,
+    model:carmodel,
+    year:madeyear
+}
+let car:cartype={
+    name:'renault',
+    model:'lsdf',
+    year:2342
+}
