@@ -32,3 +32,8 @@ let arr = [2]//this will infer the type as number[]
 arr.push(1)
 arr.push("hello")
 console.log(arr)
+
+let tuple: readonly[number,boolean,string ]
+tuple  = [98,true,"hello world"]
+tuple.push("hello")
+
