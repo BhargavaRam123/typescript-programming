@@ -73,3 +73,22 @@ let car:cartype={
     model:'lsdf',
     year:2342
 }
+
+interface Car{
+    name:string ,
+    madein:string
+}
+
+let car:Car  = {
+    name:"audi",
+    madein:"3434"
+}
+
+interface supercar extends Car{
+    totalavailable:number
+}
+let supcar:supercar ={
+    totalavailable : 34,
+    name:";alskfjd;l",
+    madein:"a;lsfdkj"
+}
