@@ -20,3 +20,9 @@ function func1(val:unknown)
     if(typeof val === "string")
     console.log(val.toUpperCase())
 }
+
+let arr: readonly string[] = []
+// arr.push("hello")
+// arr.push("hello2")
+// arr.push("hello23")
+console.log(arr)
