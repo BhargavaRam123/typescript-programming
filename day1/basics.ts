@@ -37,3 +37,9 @@ let tuple: readonly[number,boolean,string ]
 tuple  = [98,true,"hello world"]
 tuple.push("hello")
 
+//creating objects in ts 
+let obj:{name:string,age:number, section:string} = {
+    name:"bhargav",
+    age:23,
+    section:"c1"
+}
