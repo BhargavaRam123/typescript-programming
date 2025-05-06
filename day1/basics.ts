@@ -26,3 +26,9 @@ let arr: readonly string[] = []
 // arr.push("hello2")
 // arr.push("hello23")
 console.log(arr)
+
+
+let arr = [2]//this will infer the type as number[]
+arr.push(1)
+arr.push("hello")
+console.log(arr)
