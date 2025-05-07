@@ -34,17 +34,25 @@ enum taskstatus{
            this.tasks = this.tasks.map((obj)=>
             obj.id === id ? {...obj,completionstatus:taskstatus.completed}:obj
            )
-       }
-       getalltasks()
-       {
-        this.tasks.map((obj)=>{
-            console.log("Task->",obj);
-        })
+        }
+        getalltasks()
+        {
+            this.tasks.map((obj)=>{
+                console.log("Task->",obj);
+            })
+        }
+        marktaskasundone(id:number)
+        {
+           this.tasks = this.tasks.map((obj)=>
+            obj.id === id ? {...obj,completionstatus:taskstatus.notcompleted}:obj
+           )
        }
    }
 
 
    const taskm = new taskmanager()
    taskm.addtask("drink water","please drink water at 10:00am")
+   taskm.marktaskasdone(0)
+   taskm.marktaskasundone(0)
    taskm.addtask("eat food","please take food at 13:00")
    taskm.getalltasks()
