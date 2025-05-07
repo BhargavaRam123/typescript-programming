@@ -23,3 +23,15 @@
 
 // const obj  = new a()
 // console.log(obj.val);
+
+// class a{
+//     private readonly a:string 
+//     constructor(){
+//         this.a = "k"        
+//     }
+//     change(){
+//     }
+// }
+
+// let obj = new a()
+// console.log(obj);
