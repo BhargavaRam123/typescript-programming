@@ -12,3 +12,14 @@
 // class B extends A {};
 // class C extends A {};
 // class D extends B, C {};// This will throw an error
+
+// class a{
+//     protected val:string 
+//     constructor()
+//     {
+//         this.val = ""
+//     }
+// }
+
+// const obj  = new a()
+// console.log(obj.val);
