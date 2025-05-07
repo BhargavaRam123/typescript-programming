@@ -18,7 +18,7 @@ enum taskstatus{
            this.counter = 0 
            this.tasks = []
        }
-       addtask(title:string,description:string)
+       addtask(title:string,description:string):void
        { 
            let obj:Task ={
                id:this.counter,
@@ -29,19 +29,19 @@ enum taskstatus{
            this.counter++
            this.tasks.push(obj)
        }
-       marktaskasdone(id:number)
+       marktaskasdone(id:number):void
        {
            this.tasks = this.tasks.map((obj)=>
             obj.id === id ? {...obj,completionstatus:taskstatus.completed}:obj
            )
         }
-        getalltasks()
+        getalltasks():void
         {
             this.tasks.map((obj)=>{
                 console.log("Task->",obj);
             })
         }
-        marktaskasundone(id:number)
+        marktaskasundone(id:number):void 
         {
            this.tasks = this.tasks.map((obj)=>
             obj.id === id ? {...obj,completionstatus:taskstatus.notcompleted}:obj
