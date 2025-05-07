@@ -17,7 +17,7 @@ class Chef extends Person{
         super(name,age)
         this.occupation =occupation 
     }
-    greet(): void {
+    override greet(): void {
         console.log(`Hi i am a ${this.occupation}`);
     }
 }
