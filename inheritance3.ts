@@ -35,3 +35,13 @@
 
 // let obj = new a()
 // console.log(obj);
+
+class a {
+    constructor(public a:string)
+    {}
+    getvalue(){
+        console.log(this.a );
+    }
+}
+const obj = new a("hello world")
+obj.getvalue()
