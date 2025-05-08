@@ -35,3 +35,19 @@ const logger = createLogger({
     }
 })
 logger.info("helloworld")
+
+
+//http is used to ship logs to defined endpoint
+
+// const logger = createLogger({
+//     transports: [new transports.Http()],
+//     format: format.combine(
+//       format.timestamp(),
+//       format.printf(({ timestamp, level, message, service }) => {
+//         return `[${timestamp}] ${service} ${level}: ${message}`;
+//       })
+//     ),
+//     defaultMeta: {
+//       service: "WinstonExample",
+//     },
+//   });
