@@ -1,0 +1,20 @@
+{
+  "name": "winston",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start:dev": "npm run build && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.15.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
