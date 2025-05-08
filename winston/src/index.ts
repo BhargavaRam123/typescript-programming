@@ -71,3 +71,20 @@ const logger = createLogger({
     service: "WinstonExample",
   },
 });
+
+logger.info("hello");
+
+//colorize will apply color to the level so that error would appear red
+//when shipping logs to server spplication json format is preferable 
+
+
+//another interesting format is splat which enables string interpolation
+
+//const userid = "123"
+//logger.info("hello %s",userid)
+
+//logger.info("hello world",{correlationdi:'234',userid:'3'})
+
+//these will be collected within the metadata 
+//format.printf({...,metadata})
+
