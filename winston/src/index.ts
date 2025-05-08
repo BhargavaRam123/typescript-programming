@@ -17,24 +17,24 @@ import { createLogger,transports,format } from "winston";
 
 // logger.info('hello world!')
 
-const logger = createLogger({
-    transports:[
-        new transports.File({
-            dirname:"logs",
-            filename:"winston_example.log"
-        })
-    ],
-    format:format.combine(
-        format.timestamp(),
-        format.printf(({timestamp,level,message,service})=>{
-            return `[${timestamp} ${service} ${level}: ${message}]`
-        })
-    ),
-    defaultMeta:{
-        service:"winstonexample",
-    }
-})
-logger.info("helloworld")
+// const logger = createLogger({
+//     transports:[
+//         new transports.File({
+//             dirname:"logs",
+//             filename:"winston_example.log"
+//         })
+//     ],
+//     format:format.combine(
+//         format.timestamp(),
+//         format.printf(({timestamp,level,message,service})=>{
+//             return `[${timestamp} ${service} ${level}: ${message}]`
+//         })
+//     ),
+//     defaultMeta:{
+//         service:"winstonexample",
+//     }
+// })
+// logger.info("helloworld")
 
 
 //http is used to ship logs to defined endpoint
@@ -51,3 +51,23 @@ logger.info("helloworld")
 //       service: "WinstonExample",
 //     },
 //   });
+
+// import { createLogger, transports, format } from "winston";
+import { createWriteStream } from "fs";
+
+const logger = createLogger({
+  transports: [
+    new transports.Stream({
+      stream: createWriteStream("hello.txt"),
+    }),
+  ],
+  format: format.combine(
+    format.timestamp(),
+    format.printf(({ timestamp, level, message, service }) => {
+      return `[${timestamp}] ${service} ${level}: ${message}`;
+    })
+  ),
+  defaultMeta: {
+    service: "WinstonExample",
+  },
+});
